@@ -114,6 +114,66 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 	```
 </details>
 
+- POST `/:id/image`
+
+	<details>
+		<summary>Request</summary>
+
+	```json
+		{
+			"filename": File,
+		}
+	```
+
+	</details>
+
+
+	<details>
+		<summary>Response</summary>
+
+		Code: 200
+		Body:
+
+	```json
+	{
+		"imageId": number
+		"fileName": string,
+		"todoItem": number,
+		"updatedAt": string,
+		"createdAt": string
+	}
+	```
+</details>
+
+- GET `/:id/image`
+
+	<details>
+		<summary>Request</summary>
+
+	```json
+		{}
+	```
+
+	</details>
+
+
+	<details>
+		<summary>Response</summary>
+
+		Code: 200
+		Body:
+
+	```json
+	{
+		"imageId": number
+		"fileName": string,
+		"todoItem": number,
+		"updatedAt": string,
+		"createdAt": string
+	}
+	```
+</details>
+
 - DELETE `/:id`<br/>
 	Response: Status: 200
 
@@ -189,67 +249,6 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 	}
 	```
 	</details>
-	
-### `/todoitem/:id/image`
--POST
-<details>
-		<summary>Request</summary>
-
-	```json
-		{
-			"filename": File,
-		}
-	```
-
-	</details>
-
-
-	<details>
-		<summary>Response</summary>
-
-		Code: 200
-		Body:
-
-	```json
-	{
-		"imageId": number
-		"fileName": string,
-		"todoItem": number,
-		"updatedAt": string,
-		"createdAt": string
-	}
-	```
-</details>
-
--GET
-<details>
-		<summary>Request</summary>
-
-	```json
-		{}
-	```
-
-	</details>
-
-
-	<details>
-		<summary>Response</summary>
-
-		Code: 200
-		Body:
-
-	```json
-	{
-		"imageId": number
-		"fileName": string,
-		"todoItem": number,
-		"updatedAt": string,
-		"createdAt": string
-	}
-	```
-</details>
-
-
 
 ### `/user`
 - POST `/register`
