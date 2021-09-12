@@ -4,7 +4,7 @@
 You should have installed [NodeJS and npm](https://nodejs.org/en/download/) (they come as one) in order to start the backend server.
 
 ## Start
-- clone the ese2021-project-scaffolding repository
+- you should already have cloned the ese2021-project-scaffolding repository.
 - navigate to the backend folder `cd ese2021-project-scaffolding/backend`
 - run `npm install`
 - run `npm run dev`
@@ -189,6 +189,67 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 	}
 	```
 	</details>
+	
+### `/todoitem/:id/image`
+-POST
+<details>
+		<summary>Request</summary>
+
+	```json
+		{
+			"filename": File,
+		}
+	```
+
+	</details>
+
+
+	<details>
+		<summary>Response</summary>
+
+		Code: 200
+		Body:
+
+	```json
+	{
+		"imageId": number
+		"fileName": string,
+		"todoItem": number,
+		"updatedAt": string,
+		"createdAt": string
+	}
+	```
+</details>
+
+-GET
+<details>
+		<summary>Request</summary>
+
+	```json
+		{}
+	```
+
+	</details>
+
+
+	<details>
+		<summary>Response</summary>
+
+		Code: 200
+		Body:
+
+	```json
+	{
+		"imageId": number
+		"fileName": string,
+		"todoItem": number,
+		"updatedAt": string,
+		"createdAt": string
+	}
+	```
+</details>
+
+
 
 ### `/user`
 - POST `/register`
@@ -244,7 +305,7 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 		"user": {
 			"userId":"string",
 			"userName":"string",
-			"password":"stirng(hashed)"
+			"password":"string(hashed)"
 		},
 		"token":"string"
 	}
@@ -277,6 +338,28 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 	</details>
 
 ### `/secured`
+- GET
+	<details>
+		<summary>Request</summary>
+
+
+	Header: Authorization: Bearer  + `token`
+	</details>
+
+	<details>
+		<summary>Response</summary>
+
+		Code: 200 | 403
+		Body:
+	```json
+	{
+		"message":"string"
+	}
+
+	```
+	</details>
+	
+### `/admin`
 - GET
 	<details>
 		<summary>Request</summary>
