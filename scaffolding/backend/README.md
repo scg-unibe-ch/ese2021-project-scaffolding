@@ -121,7 +121,7 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 
 	```json
 		{
-			"filename": File,
+			"filename": "File",
 		}
 	```
 
@@ -136,11 +136,11 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 
 	```json
 	{
-		"imageId": number
-		"fileName": string,
-		"todoItem": number,
-		"updatedAt": string,
-		"createdAt": string
+		"imageId": "number"
+		"fileName": "string",
+		"todoItem": "number",
+		"updatedAt": "string",
+		"createdAt": "string"
 	}
 	```
 </details>
@@ -165,11 +165,11 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 
 	```json
 	{
-		"imageId": number
-		"fileName": string,
-		"todoItem": number,
-		"updatedAt": string,
-		"createdAt": string
+		"imageId": "number"
+		"fileName": "string",
+		"todoItem": "number",
+		"updatedAt": "string",
+		"createdAt": "string"
 	}
 	```
 </details>
