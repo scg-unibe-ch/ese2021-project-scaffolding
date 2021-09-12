@@ -1,6 +1,7 @@
-import {MulterRequest, upload} from '../middlewares/fileFilter';
+import {upload} from '../middlewares/fileFilter';
 import {TodoItem} from '../models/todoitem.model';
 import {ItemImage, ItemImageAttributes} from '../models/itemImage.model';
+import {MulterRequest} from '../models/multerRequest.model';
 
 export class ItemService {
 
@@ -31,7 +32,7 @@ export class ItemService {
                     return Promise.reject('image not found!');
                 }
             })
-            .catch(() => Promise.reject('couldn\' fetch the image!'));
+            .catch(() => Promise.reject('could not fetch the image!'));
     }
 
 

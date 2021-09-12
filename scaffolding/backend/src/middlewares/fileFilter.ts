@@ -1,15 +1,20 @@
 import multer from 'multer';
-import {Request} from 'express';
+
+
+// This is a middleware to handle the incoming files and images.
 
 const storage = multer.diskStorage({
+    // where the images are stored
     destination: function (req, file, cb) {
         cb(null, './uploads/');
     },
+    // what the image is called.
     filename: function (req, file, cb) {
         cb(null, Date.now() + '_' + file.originalname);
     }
 });
 
+// only certain data types are allowed
 const fileFilter = (req, file, cb) => {
     if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
         cb(null, true);
@@ -24,7 +29,4 @@ export const upload = multer({
     fileFilter: fileFilter
 });
 
-export interface MulterRequest extends Request {
-    file: any;
-    fileValidationError: any;
-}
+

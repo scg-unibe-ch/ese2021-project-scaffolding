@@ -6,7 +6,7 @@ export function checkAdmin(req: Request, res: Response, next: any) {
     try {
         // get secret key from environment (defined in nodemon.json)
         const secret = process.env.JWT_SECRET;
-        // since the Authorizationheader consists of "Bearer <token>" where <token> is a JWT token
+        // since the authorization header consists of "Bearer <token>" where <token> is a JWT token
         const token = req.headers.authorization.split(' ')[1];
         const decoded = jwt.verify(token, secret);
         if (decoded == null) {
