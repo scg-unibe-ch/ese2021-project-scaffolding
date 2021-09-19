@@ -388,6 +388,6 @@ Some endpoints can be called in a [browser](http://localhost:3000), others have 
 		Code: 200
 		Body:
 	```text
-	<h1>Welcome to the ESE-2020 Course</h1><span style=\"font-size:100px;\">&#127881;</span>
+	<h1>Welcome to the ESE-2021 Course</h1><span style=\"font-size:100px;\">&#127881;</span>
 	```
 	</details>
