@@ -5,7 +5,7 @@ You should have installed [NodeJS and npm](https://nodejs.org/en/download/) (the
 Make sure the backend is running according to its [README](https://github.com/scg-unibe-ch/ese2021-project-scaffolding/blob/main/scaffolding/backend/README.md).
 
 ## Start
-- navigate to the frontend folder `cd ese2021-project-scaffolding/scaffolding/frontend` within the same repo where you set up the backend
+- navigate to the frontend folder `cd ese2021-project-scaffolding/scaffolding/frontend`
 - run `npm install`
 - run `npm run dev`
 - open your browser with the url [http://localhost:4200](http://localhost:4200/)
@@ -53,11 +53,11 @@ These are links to some of the files that we have implemented/modified when deve
   Main component of the frontend application
 - **TodoListComponent** | [TS](./src/app/todo-list/todo-list.component.ts), [HTML](./src/app/todo-list/todo-list.component.html)  
   Represents a todo-list
-- **TodoItemComponent** | [TS](./src/app/todo-list/todo-item.component.ts), [HTML](./src/app/todo-list/todo-item.component.html)  
+- **TodoItemComponent** | [TS](./src/app/todo-list/todo-item/todo-item.component.ts), [HTML](./src/app/todo-list/todo-item/todo-item.component.html)  
   Represents a todo-item
-- **UserLoginComponent** | [TS](./src/app/user-login/user-login.component.ts), [HTML](./src/app/user-login/user-login.component.html)  
-  Represents the user login section
-- **UserService** | [TS](./src/app/services/user.service.ts)
+- **UserComponent** | [TS](./src/app/user/user.component.ts), [HTML](./src/app/user/user.component.html)  
+  Represents the user registration and login section. Contains requests to user/admin endpoints.
+- **UserService** | [TS](./src/app/services/user.service.ts)  
   Service to keep track of login state and user data to sync it between components
 - **[AuthInterceptor](./src/app/auth/auth.interceptor.ts)**  
   Intercepts all HTTP requests to add the user token if a user is logged in.

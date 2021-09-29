@@ -40,7 +40,6 @@ export class TodoListComponent {
 
   // CREATE - TodoItem
   createItem(): void {
-    console.log(this.todoList)
     this.httpClient.post(environment.endpointURL + "todoitem", {
       name: this.newTodoItemName,
       done: false,

@@ -64,6 +64,7 @@ export class UserComponent {
     localStorage.removeItem('userToken');
 
     this.userService.setLoggedIn(false);
+    this.userService.setUser(undefined);
   }
 
   accessUserEndpoint(): void {

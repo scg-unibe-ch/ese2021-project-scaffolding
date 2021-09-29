@@ -46,11 +46,11 @@ export class UserService {
    * SETTERS
    ******************************************************************************************************************/
 
-  setLoggedIn(loggedIn: boolean): void {
+  setLoggedIn(loggedIn: boolean | undefined): void {
     this.loggedInSource.next(loggedIn);
   }
 
-  setUser(user: User): void {
+  setUser(user: User | undefined): void {
     this.userSource.next(user);
   }
 
